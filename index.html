@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DOPPIO Arquitetura - Criamos espaços que contam histórias. Arquitetura e interiores em Teresina, Piauí.">
+    <meta name="keywords" content="arquitetura, interiores, design, Teresina, Piauí, DOPPIO">
+    <title>DOPPIO Arquitetura | Criamos espaços que contam histórias</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="public/images/logos/logo-preto.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">
+                <img src="public/images/logos/logo-preto.png" alt="DOPPIO Arquitetura" class="nav__logo-img">
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active">Início</a></li>
+                    <li class="nav__item"><a href="#sobre" class="nav__link">Sobre</a></li>
+                    <li class="nav__item"><a href="#diferenciais" class="nav__link">Diferenciais</a></li>
+                    <li class="nav__item"><a href="#portfolio" class="nav__link">Portfólio</a></li>
+                    <li class="nav__item"><a href="https://portal.doppioarq.com.br" target="_blank" style="background: var(--terracota, #C4714F); color: white; padding: 0.5rem 1rem; border-radius: 6px;">Área do Cliente</a>
+                <a href="#contato" class="nav__link nav__link--cta">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION com vídeo -->
+    <section class="hero" id="home">
+        <div class="hero__video-container">
+            <video class="hero__video" autoplay muted loop playsinline>
+                <source src="public/videos/hero.mp4" type="video/mp4">
+            </video>
+            <div class="hero__overlay"></div>
+        </div>
+        
+        <div class="hero__content">
+            <h1 class="hero__title">
+                Criamos espaços<br>que contam <span class="hero__title--highlight">histórias</span>
+            </h1>
+            <p class="hero__subtitle">
+                Arquitetura e interiores que transformam ambientes em experiências memoráveis
+            </p>
+            <div class="hero__cta">
+                <a href="#portfolio" class="btn btn--primary">Conheça nossos projetos</a>
+                <a href="#contato" class="btn btn--secondary">Fale conosco</a>
+            </div>
+        </div>
+
+        <a href="#sobre" class="hero__scroll">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 5v14M19 12l-7 7-7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </a>
+    </section>
+
+    <!-- SOBRE NÓS -->
+    <section class="about" id="sobre">
+        <div class="container">
+            <div class="about__intro">
+                <h2 class="section__title">Sobre Nós</h2>
+                <p class="about__intro-text">
+                    A DOPPIO nasceu da paixão por criar espaços que contam histórias — histórias reais, vividas, cheias de identidade. Somos especialistas em arquitetura e decoração, dedicados a criar espaços inovadores e criativos que inspirem e encantem.
+                </p>
+            </div>
+
+            <div class="about__team">
+                <!-- Letycia -->
+                <div class="about__member">
+                    <div class="about__member-image">
+                        <img src="public/images/equipe/letycia.jpg" alt="Letycia Raulino - Arquiteta">
+                    </div>
+                    <div class="about__member-info">
+                        <h3 class="about__member-name">Letycia Raulino</h3>
+                        <p class="about__member-title">Arquiteta e Urbanista | Engenheira de Segurança</p>
+                        <p class="about__member-bio">
+                            Sou arquiteta e urbanista, engenheira de segurança do trabalho e possuo experiência em avaliações de imóveis. Minha atuação une técnica, criatividade e propósito: acredito que cada projeto deve nascer do entendimento real das necessidades de quem vai viver, trabalhar ou receber pessoas naquele espaço.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Nertan -->
+                <div class="about__member about__member--reverse">
+                    <div class="about__member-image">
+                        <img src="public/images/equipe/nertan.jpg" alt="Nertan Campos - Arquiteto">
+                    </div>
+                    <div class="about__member-info">
+                        <h3 class="about__member-name">Nertan Campos</h3>
+                        <p class="about__member-title">Arquiteto | Especialista em Mobiliário</p>
+                        <p class="about__member-bio">
+                            Sou arquiteto e construí minha trajetória unindo técnica, sensibilidade e experiência prática. Foram mais de 20 anos trabalhando no universo do mobiliário — da marcenaria ao alto padrão — o que me deu uma visão prática e aprofundada sobre ergonomia, detalhamento e escolha inteligente de materiais.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O QUE NOS MOVE -->
+    <section class="values">
+        <div class="container">
+            <h2 class="section__title">O que nos move</h2>
+            <p class="values__intro">
+                Cada projeto começa ouvindo. Ouvindo as necessidades, os sonhos, a rotina e a personalidade de quem vai viver ou trabalhar naquele espaço.
+            </p>
+
+            <div class="values__grid">
+                <div class="value__card">
+                    <div class="value__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="value__title">Detalhes</h3>
+                    <p class="value__text">
+                        Focamos em cada pequeno detalhe para garantir que cada projeto conte uma história única e envolvente.
+                    </p>
+                </div>
+
+                <div class="value__card">
+                    <div class="value__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="value__title">Qualidade</h3>
+                    <p class="value__text">
+                        Nosso compromisso com a qualidade nos impulsiona a superar as expectativas, resultando em projetos excepcionais.
+                    </p>
+                </div>
+
+                <div class="value__card">
+                    <div class="value__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75M9 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="value__title">Colaboração</h3>
+                    <p class="value__text">
+                        Trabalhamos em estreita colaboração com nossos clientes para garantir que suas visões e personalidade sejam realizadas com excelência.
+                    </p>
+                </div>
+
+                <div class="value__card">
+                    <div class="value__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="value__title">Criatividade</h3>
+                    <p class="value__text">
+                        Valorizamos a criatividade em todas as etapas do processo, desde a concepção até a execução final do projeto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="differentials" id="diferenciais">
+        <div class="container">
+            <h2 class="section__title">Nossos Serviços</h2>
+            
+            <div class="differentials__grid">
+                <div class="differential__card">
+                    <h3 class="differential__title">Arquitetura e Interiores</h3>
+                    <ul class="differential__list">
+                        <li>Projetos arquitetônicos residenciais e comerciais</li>
+                        <li>Design de interiores completo</li>
+                        <li>Projetos de reforma e ampliação</li>
+                        <li>Acompanhamento e compatibilização de projetos</li>
+                    </ul>
+                </div>
+
+                <div class="differential__card">
+                    <h3 class="differential__title">Perícia e Avaliação Imobiliária</h3>
+                    <ul class="differential__list">
+                        <li>Perícia judicial imobiliária</li>
+                        <li>Avaliação de imóveis urbanos e rurais</li>
+                        <li>Laudos técnicos de vistoria</li>
+                        <li>Assistência técnica</li>
+                    </ul>
+                </div>
+
+                <div class="differential__card">
+                    <h3 class="differential__title">Engenharia de Segurança</h3>
+                    <ul class="differential__list">
+                        <li>Elaboração de laudos técnicos (LTCAT e PGR)</li>
+                        <li>Consultoria em segurança do trabalho</li>
+                        <li>Adequação de ambientes</li>
+                        <li>Análise de riscos</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFÓLIO -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section__title">Portfólio</h2>
+            <p class="portfolio__intro">
+                Conheça alguns dos nossos projetos que transformaram espaços em experiências únicas
+            </p>
+
+            <div class="portfolio__grid">
+                <!-- Projeto 1 - Apartamento T+J -->
+                <article class="portfolio__item">
+                    <div class="portfolio__image">
+                        <img src="public/images/projetos/apartamento-tj/01-capa.png" alt="Apartamento T+J - Living integrado">
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__title">Apartamento T+J</h3>
+                            <p class="portfolio__meta">Teresina, PI • 165m² • 2025</p>
+                            <a href="apartamento-tj.html" class="btn btn--primary btn--small">Ver projeto completo</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__info">
+                        <h3>Apartamento T+J</h3>
+                        <p>Ambientes sociais integrados com conceito de planta aberta que proporciona amplitude visual e funcionalidade.</p>
+                    </div>
+                </article>
+
+                <!-- Projeto 2 - Escritório JV -->
+                <article class="portfolio__item">
+                    <div class="portfolio__image">
+                        <img src="public/images/projetos/escritorio-jv/01-capa.png" alt="Escritório JV - Recepção">
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__title">Escritório JV</h3>
+                            <p class="portfolio__meta">Teresina, PI • 51m² • 2024</p>
+                            <a href="escritorio-jv.html" class="btn btn--primary btn--small">Ver projeto completo</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__info">
+                        <h3>Escritório JV</h3>
+                        <p>Escritório de advocacia que equilibra profissionalismo e acolhimento.</p>
+                    </div>
+                </article>
+
+                <!-- Projeto 3 - Apartamento F+L -->
+                <article class="portfolio__item">
+                    <div class="portfolio__image">
+                        <img src="public/images/projetos/apartamento-fl/01-capa.png" alt="Apartamento F+L - Suíte Master">
+                        <div class="portfolio__overlay">
+                            <h3 class="portfolio__title">Apartamento F+L</h3>
+                            <p class="portfolio__meta">Teresina, PI • 165m² • 2025-2026</p>
+                            <a href="apartamento-fl.html" class="btn btn--primary btn--small">Ver projeto completo</a>
+                        </div>
+                    </div>
+                    <div class="portfolio__info">
+                        <h3>Apartamento F+L</h3>
+                        <p>Projeto sensível que honrou a história do casal com mais funcionalidade e conforto.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <h2 class="section__title">Vamos criar sua história?</h2>
+            <p class="contact__intro">
+                Estamos ansiosos para ouvir sobre o seu próximo projeto. Entre em contato e descubra como podemos transformar sua visão em realidade.
+            </p>
+
+            <div class="contact__content">
+                <div class="contact__info">
+                    <div class="contact__item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:doppio.arqui@gmail.com">doppio.arqui@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contact__item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <div>
+                            <h4>Telefones</h4>
+                            <p>Letycia: <a href="tel:+5586994010085">(86) 99401-0085</a></p>
+                            <p>Nertan: <a href="tel:+5586981252508">(86) 98125-2508</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact__item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>Av. Juiz João Almeida, 2516-A<br>Horto - Teresina, PI</p>
+                        </div>
+                    </div>
+
+                    <div class="contact__item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <div>
+                            <h4>Instagram</h4>
+                            <a href="https://instagram.com/doppio_arquitetura" target="_blank">@doppio_arquitetura</a>
+                        </div>
+                    </div>
+                </div>
+
+                <form class="contact__form" id="contact-form">
+                    <div class="form__group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Nome</label>
+                    </div>
+
+                    <div class="form__group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Email</label>
+                    </div>
+
+                    <div class="form__group">
+                        <input type="tel" id="phone" name="phone" placeholder=" ">
+                        <label for="phone">Telefone (opcional)</label>
+                    </div>
+
+                    <div class="form__group">
+                        <select id="project-type" name="project-type">
+                            <option value="">Selecione o tipo de projeto</option>
+                            <option value="residencial">Residencial</option>
+                            <option value="comercial">Comercial</option>
+                            <option value="reforma">Reforma</option>
+                            <option value="pericia">Perícia/Avaliação</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                    </div>
+
+                    <div class="form__group">
+                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Conte-nos sobre seu projeto</label>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--full">Enviar mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <img src="public/images/logos/logo-branco.png" alt="DOPPIO Arquitetura">
+                    <p>Criamos espaços que contam histórias</p>
+                </div>
+
+                <div class="footer__links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__contact">
+                    <h4>Contato</h4>
+                    <p>doppio.arqui@gmail.com</p>
+                    <p>(86) 99401-0085</p>
+                    <p>(86) 98125-2508</p>
+                </div>
+
+                <div class="footer__social">
+                    <h4>Redes Sociais</h4>
+                    <a href="https://instagram.com/doppio_arquitetura" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2026 DOPPIO Arquitetura. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js"></script>
+</body>
+</html>
