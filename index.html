@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="DOPPIO Arquitetura e Interiores em Teresina-PI. Projetos residenciais e comerciais, design de interiores e reformas. Transformamos ambientes em experiências memoráveis." name="description"/>
-<meta content="arquitetura Teresina, design interiores Teresina, arquiteto Teresina PI, reforma Teresina, projeto arquitetônico Teresina" name="keywords"/>
-<meta content="DOPPIO Arquitetura" name="author"/>
-<meta content="BR-PI" name="geo.region"/>
-<meta content="Teresina" name="geo.placename"/>
-<meta content="-5.0892;-42.8016" name="geo.position"/>
-<meta content="-5.0892, -42.8016" name="ICBM"/>
-<title>DOPPIO Arquitetura | Arquitetura e Interiores em Teresina-PI</title>
-<!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-LGVXM9ECZ8"></script>
-<script>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="DOPPIO Arquitetura e Interiores em Teresina-PI. Projetos residenciais e comerciais, design de interiores e reformas." name="description">
+    <meta content="arquitetura Teresina, design interiores Teresina, arquiteto Teresina PI, reforma Teresina, projeto arquitetônico Teresina" name="keywords">
+    <meta content="DOPPIO Arquitetura" name="author">
+    <meta content="BR-PI" name="geo.region">
+    <meta content="Teresina" name="geo.placename">
+    <meta content="-5.0892;-42.8016" name="geo.position">
+    <meta content="-5.0892, -42.8016" name="ICBM">
+    <title>DOPPIO Arquitetura | Arquitetura e Interiores em Teresina-PI</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LGVXM9ECZ8"></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-LGVXM9ECZ8');
     </script>
-<!-- SEO Local - Schema Markup -->
-<script type="application/ld+json">
+    <!-- SEO Local - Schema Markup -->
+    <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ArchitecturalService",
       "name": "DOPPIO Arquitetura e Interiores",
       "description": "Escritório de arquitetura e interiores em Teresina-PI. Projetos residenciais e comerciais, design de interiores e reformas.",
       "url": "https://doppioarq.com.br",
-            "address": {
+      "address": {
         "@type": "PostalAddress",
         "streetAddress": "Av. Juiz João Almeida, 2516 - A",
         "addressLocality": "Teresina",
@@ -58,705 +58,144 @@
       }
     }
     </script>
-<!-- Favicon -->
-<link href="public/images/logos/logo-preto.png" rel="icon" type="image/png"/>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<!-- Styles -->
-<link href="styles/main.css" rel="stylesheet"/>
 
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-
-<style>
-/* ===== FONT OVERRIDE (SOFTER / ELEGANT) ===== */
-body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, select, span, li {
-  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif !important;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-</style>
-
-<style>
-/* ===== PORTFOLIO MARQUEE (subtle, clean) ===== */
-.portfolio-marquee{
-  position: relative;
-  overflow: hidden;
-  margin-top: 28px;
-  padding: 6px 0;
-  mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
-}
-.portfolio-track{
-  display:flex;
-  gap:18px;
-  width:max-content;
-  
-    animation: portfolioScroll 70s linear infinite;
-will-change: transform;
-}
-.portfolio-marquee:hover .portfolio-track{ animation-play-state: paused; }
-@media (prefers-reduced-motion: reduce){
-  .portfolio-track{ animation: none; }
-  .portfolio-marquee{ overflow-x:auto; scroll-snap-type:x mandatory; }
-  .portfolio-track{ padding-bottom: 10px; }
-  .pm-card{ scroll-snap-align: start; }
-}
-/* No celular o carrossel some do modo "marquee automático" e vira
-   arrastável com indicador de posição — sempre, não só com reduced-motion */
-@media (max-width: 768px){
-  .portfolio-track{ animation: none; }
-  .portfolio-marquee{ overflow-x:auto; scroll-snap-type:x mandatory; mask-image:none; -webkit-mask-image:none; }
-  .portfolio-track{ padding-bottom: 10px; }
-  .pm-card{ scroll-snap-align: start; }
-}
-.pm-indicator{
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
-  font-size: .82rem;
-  color: #EDE6D6;
-  opacity: .85;
-  letter-spacing: 0.04em;
-}
-@keyframes portfolioScroll{to{ transform: translateX(-50%); }}
-.pm-card{
-  position:relative;
-  flex:0 0 360px;
-  height: 220px;
-  border-radius: 16px;
-  overflow:hidden;
-  background: #111;
-  cursor:pointer;
-  transform: translateZ(0);
-}
-.pm-media, .pm-media img{ width:100%; height:100%; }
-.pm-media img{ object-fit: cover; display:block; }
-.pm-overlay{
-  position:absolute;
-  inset:0;
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-end;
-  gap:6px;
-  padding: 14px 14px 12px;
-  background: linear-gradient(to top, rgba(0,0,0,.68), rgba(0,0,0,.0) 60%);
-  color:#fff;
-}
-.pm-title{ font-size: 34px; font-weight: 600; letter-spacing: -0.01em; }
-.pm-meta{ font-size: .82rem; opacity: .85; }
-.pm-details{
-  align-self:flex-start;
-  font-size: .82rem;
-  opacity: .9;
-  text-decoration: underline;
-}
-.pm-card:hover{ transform: translateY(-2px); }
-.portfolio__hint{
-  margin-top: 14px;
-  color: #EDE6D6; opacity:.85;
-  font-size: .9rem;
-}
-
-/* ===== LIGHTBOX ===== */
-.pm-modal{
-  position:fixed;
-  inset:0;
-  background: rgba(0,0,0,.92);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:9999;
-  padding: 24px;
-}
-.pm-modal.show{ display:flex; }
-.pm-modal-content{
-  max-width: min(980px, 92vw);
-  max-height: 86vh;
-  display:flex;
-  flex-direction:column;
-  gap: 12px;
-  align-items:center;
-}
-.pm-modal-content img{
-  max-width: 100%;
-  max-height: 76vh;
-  object-fit: contain;
-  border-radius: 12px;
-}
-.pm-caption{
-  width:100%;
-  display:flex;
-  justify-content:space-between;
-  gap: 16px;
-  color:#fff;
-  opacity:.92;
-  font-size: .95rem;
-}
-.pm-caption-title{ font-weight:600; }
-.pm-caption-meta{ opacity:.8; }
-.pm-close{
-  position:absolute;
-  top: 18px;
-  right: 18px;
-  width: 44px;
-  height: 44px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.18);
-  background: rgba(255,255,255,.08);
-  color:#fff;
-  cursor:pointer;
-}
-.pm-nav{
-  position:absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 46px;
-  height: 46px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,.18);
-  background: rgba(255,255,255,.08);
-  color:#fff;
-  font-size: 28px;
-  line-height: 0;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.pm-prev{ left: 18px; }
-.pm-next{ right: 18px; }
-.pm-close:hover, .pm-nav:hover{ background: rgba(255,255,255,.14); }
-
-@media (max-width: 520px){
-  .pm-card{ flex-basis: 420px; height: 280px; border-radius: 14px; }
-  .pm-nav{ width: 40px; height: 40px; font-size: 22px; }
-  .pm-caption{ flex-direction:column; }
-}
-</style>
+    <!-- Favicon -->
+    <link href="public/images/logos/logo-preto.png" rel="icon" type="image/png">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Styles -->
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+    /* ===== FONT OVERRIDE (SOFTER / ELEGANT) ===== */
+    body, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, select, span, li {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif !important;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    </style>
+    <style>
+    /* Hero-only home: sem overlay de scroll, mais leve */
+    .hero__cta { margin-top: var(--spacing-sm); }
+    </style>
 </head>
 <body>
-<!-- HEADER / NAVIGATION -->
-<header class="header" id="header">
-<nav class="nav container">
-<a class="nav__logo" href="#">
-<img alt="DOPPIO Arquitetura" class="nav__logo-img" src="public/images/logos/logo-preto.png"/>
-</a>
-<div class="nav__menu" id="nav-menu">
-<ul class="nav__list">
-<li class="nav__item"><a class="nav__link active" href="#home">Início</a></li>
-<li class="nav__item"><a class="nav__link" href="#sobre">Sobre</a></li>
-<li class="nav__item"><a class="nav__link" href="#diferenciais">Diferenciais</a></li>
-<li class="nav__item"><a class="nav__link" href="#portfolio">Portfólio</a></li>
-<li class="nav__item"><a class="nav__link nav__link--cta" href="#contato">Contato</a></li><li class="nav__item"><a class="nav__link nav__link--cta" href="https://portal.doppioarq.com.br" target="_blank" rel="noopener">ÁREA DO CLIENTE</a></li>
-</ul>
-</div>
-<div class="nav__toggle" id="nav-toggle">
-<span></span>
-<span></span>
-<span></span>
-</div>
-</nav>
-</header>
-<div class="nav__overlay" id="nav-overlay"></div>
-<!-- HERO SECTION com vídeo -->
-<section class="hero" id="home">
-<div class="hero__video-container">
-<video autoplay="" class="hero__video" loop="" muted="" playsinline="">
-<source src="public/videos/hero.mp4" type="video/mp4"/>
-</video>
-<div class="hero__overlay"></div>
-</div>
-<div class="hero__content">
-<h1 class="hero__title">
-                Criamos espaços<br/>que contam <span class="hero__title--highlight">histórias</span>
-</h1>
-<p class="hero__subtitle">
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">
+                <img src="public/images/logos/logo-preto.png" alt="DOPPIO Arquitetura" class="nav__logo-img">
+            </a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link active">Início</a></li>
+                    <li class="nav__item"><a href="sobre.html" class="nav__link">Sobre</a></li>
+                    <li class="nav__item"><a href="projetos.html" class="nav__link">Projetos</a></li>
+                    <li class="nav__item"><a href="contato.html" class="nav__link--cta nav__link">Contato</a></li>
+                    <li class="nav__item"><a href="https://portal.doppioarq.com.br" target="_blank" rel="noopener" class="nav__link--cta">ÁREA DO CLIENTE</a></li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    <div class="nav__overlay" id="nav-overlay"></div>
+
+    <!-- HERO SECTION com vídeo -->
+    <section class="hero" id="home">
+        <div class="hero__video-container">
+            <video autoplay class="hero__video" loop muted playsinline>
+                <source src="public/videos/hero.mp4" type="video/mp4">
+            </video>
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="hero__content">
+            <h1 class="hero__title">
+                Criamos espaços<br>que contam <span class="hero__title--highlight">histórias</span>
+            </h1>
+            <p class="hero__subtitle">
                 Arquitetura e interiores que transformam ambientes em experiências memoráveis
             </p>
-<div class="hero__cta">
-<a class="btn btn--primary" href="#portfolio">Conheça nossos projetos</a>
-<a class="btn btn--secondary" href="#contato">Fale conosco</a>
-</div>
-</div>
-<a class="hero__scroll" href="#sobre">
-<svg fill="none" height="24" viewbox="0 0 24 24" width="24">
-<path d="M12 5v14M19 12l-7 7-7-7" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
-</svg>
-</a>
-</section>
-<!-- SOBRE NÓS -->
-<section class="about" id="sobre">
-<div class="container">
-<div class="about__intro">
-<h2 class="section__title">Sobre Nós</h2>
-<p class="about__intro-text">
-                    A DOPPIO nasceu da paixão por criar espaços que contam histórias — histórias reais, vividas, cheias de identidade. Somos especialistas em arquitetura e decoração, dedicados a criar espaços inovadores e criativos que inspirem e encantem.
-                </p>
-</div>
-<div class="about__team">
-<!-- Letycia -->
-<div class="about__member">
-<div class="about__member-image">
-<img alt="Letycia Raulino - Arquiteta" src="public/images/equipe/letycia.jpg"/>
-</div>
-<div class="about__member-info">
-<h3 class="about__member-name">Letycia Raulino</h3>
-<p class="about__member-title">Arquiteta e Urbanista | Engenheira de Segurança</p>
-<p class="about__member-bio">
-                            Sou arquiteta e urbanista, engenheira de segurança do trabalho e possuo experiência em avaliações de imóveis. Minha atuação une técnica, criatividade e propósito: acredito que cada projeto deve nascer do entendimento real das necessidades de quem vai viver, trabalhar ou receber pessoas naquele espaço.
-                        </p>
-</div>
-</div>
-<!-- Nertan -->
-<div class="about__member about__member--reverse">
-<div class="about__member-image">
-<img alt="Nertan Campos - Arquiteto" src="public/images/equipe/nertan.jpg"/>
-</div>
-<div class="about__member-info">
-<h3 class="about__member-name">Nertan Campos</h3>
-<p class="about__member-title">Arquiteto | Especialista em Mobiliário</p>
-<p class="about__member-bio">
-                            Sou arquiteto e construí minha trajetória unindo técnica, sensibilidade e experiência prática. Foram mais de 20 anos trabalhando no universo do mobiliário — da marcenaria ao alto padrão — o que me deu uma visão prática e aprofundada sobre ergonomia, detalhamento e escolha inteligente de materiais.
-                        </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- O QUE NOS MOVE -->
-<section class="values">
-<div class="container">
-<h2 class="section__title">O que nos move</h2>
-<p class="values__intro">
-                Cada projeto começa ouvindo. Ouvindo as necessidades, os sonhos, a rotina e a personalidade de quem vai viver ou trabalhar naquele espaço.
-            </p>
-<div class="values__grid">
-<div class="value__card">
-<div class="value__icon">
-<svg fill="none" height="48" viewbox="0 0 24 24" width="48">
-<path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2"></path>
-</svg>
-</div>
-<h3 class="value__title">Detalhes</h3>
-<p class="value__text">
-                        Focamos em cada pequeno detalhe para garantir que cada projeto conte uma história única e envolvente.
-                    </p>
-</div>
-<div class="value__card">
-<div class="value__icon">
-<svg fill="none" height="48" viewbox="0 0 24 24" width="48">
-<path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="2"></path>
-</svg>
-</div>
-<h3 class="value__title">Qualidade</h3>
-<p class="value__text">
-                        Nosso compromisso com a qualidade nos impulsiona a superar as expectativas, resultando em projetos excepcionais.
-                    </p>
-</div>
-<div class="value__card">
-<div class="value__icon">
-<svg fill="none" height="48" viewbox="0 0 24 24" width="48">
-<path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75M9 11a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2"></path>
-</svg>
-</div>
-<h3 class="value__title">Colaboração</h3>
-<p class="value__text">
-                        Trabalhamos em estreita colaboração com nossos clientes para garantir que suas visões e personalidade sejam realizadas com excelência.
-                    </p>
-</div>
-<div class="value__card">
-<div class="value__icon">
-<svg fill="none" height="48" viewbox="0 0 24 24" width="48">
-<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="currentColor" stroke-width="2"></path>
-</svg>
-</div>
-<h3 class="value__title">Criatividade</h3>
-<p class="value__text">
-                        Valorizamos a criatividade em todas as etapas do processo, desde a concepção até a execução final do projeto.
-                    </p>
-</div>
-</div>
-</div>
-</section>
-<!-- DIFERENCIAIS -->
-<section class="differentials" id="diferenciais">
-<div class="container">
-<h2 class="section__title">Nossos Serviços</h2>
-<div class="differentials__grid">
-<div class="differential__card">
-<h3 class="differential__title">Arquitetura e Interiores</h3>
-<ul class="differential__list">
-<li>Projetos arquitetônicos residenciais e comerciais</li>
-<li>Design de interiores completo</li>
-<li>Projetos de reforma e ampliação</li>
-<li>Acompanhamento e compatibilização de projetos</li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<!-- PORTFÓLIO -->
-<section class="portfolio" id="portfolio" style="background:#2C2C2C;color:#EDE6D6;">
-  <div class="container">
-    <h2 class="section__title" style="color:#F5F0E8;">Portfólio</h2>
-    <p class="portfolio__intro" style="color:#EDE6D6;opacity:.85;">Conheça alguns dos nossos projetos que transformaram espaços em experiências únicas</p>
-
-    <div class="portfolio-marquee" aria-label="Galeria de projetos">
-      <div class="portfolio-track">
-        <div class="pm-card" role="button" tabindex="0" data-project="apartamento-tj">
-        <div class="pm-media">
-          <img src="public/images/projetos/apartamento-tj/01-capa.png" alt="Apartamento T+J" loading="lazy" decoding="async">
-        </div>
-        <div class="pm-overlay">
-          <div class="pm-title">Apartamento T+J</div>
-          <div class="pm-meta">Teresina, PI • 165m² • 2025</div>
-          <a class="pm-details" href="apartamento-tj.html" onclick="event.stopPropagation()">Ver detalhes</a>
-        </div>
-      </div>
-<div class="pm-card" role="button" tabindex="0" data-project="escritorio-jv">
-        <div class="pm-media">
-          <img src="public/images/projetos/escritorio-jv/01-capa.png" alt="Escritório JV" loading="lazy" decoding="async">
-        </div>
-        <div class="pm-overlay">
-          <div class="pm-title">Escritório JV</div>
-          <div class="pm-meta">Teresina, PI • 51m² • 2024</div>
-          <a class="pm-details" href="escritorio-jv.html" onclick="event.stopPropagation()">Ver detalhes</a>
-        </div>
-      </div>
-<div class="pm-card" role="button" tabindex="0" data-project="apartamento-fl">
-        <div class="pm-media">
-          <img src="public/images/projetos/apartamento-fl/01-capa.png" alt="Apartamento F+L" loading="lazy" decoding="async">
-        </div>
-        <div class="pm-overlay">
-          <div class="pm-title">Apartamento F+L</div>
-          <div class="pm-meta">Teresina, PI • 165m² • 2025-2026</div>
-          <a class="pm-details" href="apartamento-fl.html" onclick="event.stopPropagation()">Ver detalhes</a>
-        </div>
-      </div>
-<div class="pm-card" role="button" tabindex="0" data-project="apartamento-tj">
-        <div class="pm-media">
-          <img src="public/images/projetos/apartamento-tj/01-capa.png" alt="Apartamento T+J" loading="lazy" decoding="async">
-        </div>
-        <div class="pm-overlay">
-          <div class="pm-title">Apartamento T+J</div>
-          <div class="pm-meta">Teresina, PI • 165m² • 2025</div>
-          <a class="pm-details" href="apartamento-tj.html" onclick="event.stopPropagation()">Ver detalhes</a>
-        </div>
-      </div>
-<div class="pm-card" role="button" tabindex="0" data-project="escritorio-jv">
-        <div class="pm-media">
-          <img src="public/images/projetos/escritorio-jv/01-capa.png" alt="Escritório JV" loading="lazy" decoding="async">
-        </div>
-        <div class="pm-overlay">
-          <div class="pm-title">Escritório JV</div>
-          <div class="pm-meta">Teresina, PI • 51m² • 2024</div>
-          <a class="pm-details" href="escritorio-jv.html" onclick="event.stopPropagation()">Ver detalhes</a>
-        </div>
-      </div>
-<div class="pm-card" role="button" tabindex="0" data-project="apartamento-fl">
-        <div class="pm-media">
-          <img src="public/images/projetos/apartamento-fl/01-capa.png" alt="Apartamento F+L" loading="lazy" decoding="async">
-        </div>
-        <div class="pm-overlay">
-          <div class="pm-title">Apartamento F+L</div>
-          <div class="pm-meta">Teresina, PI • 165m² • 2025-2026</div>
-          <a class="pm-details" href="apartamento-fl.html" onclick="event.stopPropagation()">Ver detalhes</a>
-        </div>
-      </div>
-<div class="pm-card" role="button" tabindex="0" data-project="apartamento-tj">
-        <div class="pm-media">
-          <img src="public/images/projetos/apartamento-tj/01-capa.png" alt="Apartamento T+J" loading="lazy" decoding="async">
-        </div>
-        <div class="pm-overlay">
-          <div class="pm-title">Apartamento T+J</div>
-          <div class="pm-meta">Teresina, PI • 165m² • 2025</div>
-          <a class="pm-details" href="apartamento-tj.html" onclick="event.stopPropagation()">Ver detalhes</a>
-        </div>
-      </div>
-<div class="pm-card" role="button" tabindex="0" data-project="escritorio-jv">
-        <div class="pm-media">
-          <img src="public/images/projetos/escritorio-jv/01-capa.png" alt="Escritório JV" loading="lazy" decoding="async">
-        </div>
-        <div class="pm-overlay">
-          <div class="pm-title">Escritório JV</div>
-          <div class="pm-meta">Teresina, PI • 51m² • 2024</div>
-          <a class="pm-details" href="escritorio-jv.html" onclick="event.stopPropagation()">Ver detalhes</a>
-        </div>
-      </div>
-<div class="pm-card" role="button" tabindex="0" data-project="apartamento-fl">
-        <div class="pm-media">
-          <img src="public/images/projetos/apartamento-fl/01-capa.png" alt="Apartamento F+L" loading="lazy" decoding="async">
-        </div>
-        <div class="pm-overlay">
-          <div class="pm-title">Apartamento F+L</div>
-          <div class="pm-meta">Teresina, PI • 165m² • 2025-2026</div>
-          <a class="pm-details" href="apartamento-fl.html" onclick="event.stopPropagation()">Ver detalhes</a>
-        </div>
-      </div>
-<div class="pm-card" role="button" tabindex="0" data-project="apartamento-tj">
-        <div class="pm-media">
-          <img src="public/images/projetos/apartamento-tj/01-capa.png" alt="Apartamento T+J" loading="lazy" decoding="async">
-        </div>
-        <div class="pm-overlay">
-          <div class="pm-title">Apartamento T+J</div>
-          <div class="pm-meta">Teresina, PI • 165m² • 2025</div>
-          <a class="pm-details" href="apartamento-tj.html" onclick="event.stopPropagation()">Ver detalhes</a>
-        </div>
-      </div>
-<div class="pm-card" role="button" tabindex="0" data-project="escritorio-jv">
-        <div class="pm-media">
-          <img src="public/images/projetos/escritorio-jv/01-capa.png" alt="Escritório JV" loading="lazy" decoding="async">
-        </div>
-        <div class="pm-overlay">
-          <div class="pm-title">Escritório JV</div>
-          <div class="pm-meta">Teresina, PI • 51m² • 2024</div>
-          <a class="pm-details" href="escritorio-jv.html" onclick="event.stopPropagation()">Ver detalhes</a>
-        </div>
-      </div>
-<div class="pm-card" role="button" tabindex="0" data-project="apartamento-fl">
-        <div class="pm-media">
-          <img src="public/images/projetos/apartamento-fl/01-capa.png" alt="Apartamento F+L" loading="lazy" decoding="async">
-        </div>
-        <div class="pm-overlay">
-          <div class="pm-title">Apartamento F+L</div>
-          <div class="pm-meta">Teresina, PI • 165m² • 2025-2026</div>
-          <a class="pm-details" href="apartamento-fl.html" onclick="event.stopPropagation()">Ver detalhes</a>
-        </div>
-      </div>
-      </div>
-    </div>
-
-    <p class="portfolio__hint">Arraste para o lado ou clique em um projeto para abrir a galeria.</p>
-    <div class="pm-indicator" id="pmScrollIndicator"></div>
-  </div>
-</section>
-
-<!-- CONTATO -->
-<section class="contact" id="contato">
-<div class="container">
-<h2 class="section__title">Vamos criar sua história?</h2>
-<p class="contact__intro">
-                Estamos ansiosos para ouvir sobre o seu próximo projeto. Entre em contato e descubra como podemos transformar sua visão em realidade.
-            </p>
-<div class="contact__content">
-<div class="contact__info">
-<div class="contact__item">
-<svg fill="none" height="24" viewbox="0 0 24 24" width="24">
-<path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" stroke-width="2"></path>
-</svg>
-<div>
-<h4>Email</h4>
-<a href="mailto:doppio.arqui@gmail.com">doppio.arqui@gmail.com</a>
-</div>
-</div>
-<div class="contact__item">
-            <div class="contact__icon" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M20.52 3.48A11.91 11.91 0 0 0 12.02 0C5.4 0 .06 5.34.06 11.93c0 2.1.55 4.16 1.6 5.98L0 24l6.27-1.64a11.93 11.93 0 0 0 5.74 1.46h.01c6.62 0 11.96-5.34 11.96-11.93 0-3.18-1.24-6.17-3.45-8.41ZM12.02 21.6h-.01a9.9 9.9 0 0 1-5.05-1.39l-.36-.21-3.72.98.99-3.63-.24-.37A9.88 9.88 0 0 1 2.1 11.93C2.1 6.44 6.55 2 12.02 2c2.64 0 5.12 1.03 6.99 2.88a9.86 9.86 0 0 1 2.9 7.05c0 5.49-4.45 9.67-9.89 9.67Zm5.74-7.38c-.31-.16-1.84-.91-2.13-1.01-.29-.11-.5-.16-.71.16-.21.31-.82 1.01-1 1.22-.18.21-.37.24-.68.08-.31-.16-1.31-.48-2.49-1.53-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.48.14-.64.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.71-.98-2.34-.26-.62-.52-.54-.71-.55h-.61c-.21 0-.55.08-.84.39-.29.31-1.1 1.08-1.1 2.63 0 1.55 1.13 3.05 1.28 3.26.16.21 2.22 3.39 5.39 4.75.75.32 1.34.51 1.8.65.76.24 1.45.2 1.99.12.61-.09 1.84-.75 2.1-1.48.26-.73.26-1.36.18-1.48-.08-.12-.29-.2-.6-.36Z" fill="currentColor"/>
-              </svg>
+            <div class="hero__cta">
+                <a class="btn btn--primary" href="projetos.html">Conheça nossos projetos</a>
+                <a class="btn btn--secondary" href="contato.html">Fale conosco</a>
             </div>
-            <div>
-              <h4>WhatsApp</h4>
-              <p><a href="https://wa.me/5586981252508?text=Olá!%20Gostaria%20de%20falar%20com%20a%20Doppio." target="_blank" rel="noopener">Falar no WhatsApp</a></p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <img src="public/images/logos/logo-branco.png" alt="DOPPIO Arquitetura">
+                    <p>Criamos espaços que contam histórias</p>
+                </div>
+
+                <div class="footer__links">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="projetos.html">Projetos</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__contact">
+                    <h4>Contato</h4>
+                    <p>doppio.arqui@gmail.com</p>
+                </div>
+
+                <div class="footer__social">
+                    <h4>Redes Sociais</h4>
+                    <a href="https://instagram.com/doppio_arquitetura" target="_blank">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-          </div>
-<div class="contact__item">
-<svg fill="none" height="24" viewbox="0 0 24 24" width="24">
-<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"></path>
-<circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"></circle>
-</svg>
-<div>
-<h4>Endereço</h4>
-<p>Av. Juiz João Almeida, 2516-A<br/>Horto - Teresina, PI</p>
-</div>
-</div>
-<div class="contact__item">
-<svg fill="none" height="24" viewbox="0 0 24 24" width="24">
-<rect height="20" rx="5" stroke="currentColor" stroke-width="2" width="20" x="2" y="2"></rect>
-<path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zM17.5 6.5h.01" stroke="currentColor" stroke-width="2"></path>
-</svg>
-<div>
-<h4>Instagram</h4>
-<a href="https://instagram.com/doppio_arquitetura" target="_blank">@doppio_arquitetura</a>
-</div>
-</div>
-</div>
-<form action="https://formsubmit.co/doppio.arqui@gmail.com" class="contact__form" id="contact-form" method="POST">
-<div class="form__group">
-<input id="name" name="name" placeholder=" " required="" type="text"/>
-<label for="name">Nome</label>
-</div>
-<div class="form__group">
-<input id="email" name="email" placeholder=" " required="" type="email"/>
-<label for="email">Email</label>
-</div>
-<div class="form__group">
-<input id="phone" name="phone" placeholder=" " type="tel"/>
-<label for="phone">Telefone (opcional)</label>
-</div>
-<div class="form__group">
-<select id="project-type" name="project-type">
-<option value="">Selecione o tipo de projeto</option>
-<option value="residencial">Residencial</option>
-<option value="comercial">Comercial</option>
-<option value="reforma">Reforma</option>
-<option value="outro">Outro</option>
-</select>
-</div>
-<div class="form__group">
-<textarea id="message" name="message" placeholder=" " required="" rows="5"></textarea>
-<label for="message">Conte-nos sobre seu projeto</label>
-</div>
-<button class="btn btn--primary btn--full" type="submit">Enviar mensagem</button>
-<input name="_captcha" type="hidden" value="false"/><input name="_next" type="hidden" value="https://doppioarq.com.br/"/></form>
-</div>
-</div>
-</section>
-<!-- FOOTER -->
 
+            <div class="footer__bottom">
+                <p>&copy; 2026 DOPPIO Arquitetura. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
 
-<footer style="background:#2C2C2C;padding:3.5rem 1.5rem;display:flex;justify-content:flex-start;align-items:flex-end;">
-  <div style="display:flex;flex-direction:column;align-items:flex-start;gap:.4rem;">
-    <img src="public/images/logos/logo-branco.png" alt="Doppio" style="height:68px;opacity:0.95;">
-    <span style="color:#EDE6D6;font-size:.85rem;letter-spacing:.14em;opacity:.85;">Arquitetura &amp; Interiores</span>
-  </div>
-</footer>
+    <!-- WhatsApp Button (desktop) -->
+    <a href="https://wa.me/5586981252508?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20projetos%20da%20DOPPIO." target="_blank" class="whatsapp-button" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
 
+    <!-- BARRA DE NAVEGAÇÃO INFERIOR (somente celular) -->
+    <nav class="mobile-tabbar" aria-label="Navegação rápida">
+        <a class="tabbar__link active" href="index.html">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 11l9-8 9 8M5 10v10h14V10" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Início</span>
+        </a>
+        <a class="tabbar__link" href="projetos.html">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/><rect x="14" y="3" width="7" height="7" stroke="currentColor" stroke-width="2"/><rect x="3" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/><rect x="14" y="14" width="7" height="7" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Projetos</span>
+        </a>
+        <a class="tabbar__link" href="contato.html">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="16" stroke="currentColor" stroke-width="2"/><path d="M3 6l9 7 9-7" stroke="currentColor" stroke-width="2"/></svg>
+            <span>Contato</span>
+        </a>
+        <a class="tabbar__link tabbar__link--whatsapp" href="https://wa.me/5586981252508?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20projetos%20da%20DOPPIO." target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.44.79 3.06 1.2 4.72 1.2h.02c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.79 14.13c-.24.68-1.42 1.3-1.96 1.36-.5.06-1.02.25-3.4-.71-2.86-1.16-4.7-4.08-4.85-4.27-.14-.19-1.17-1.55-1.17-2.96s.73-2.1 1-2.39c.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.56.8 1.95.87 2.09.07.14.12.31.02.5-.09.19-.14.3-.28.46-.14.16-.3.36-.42.48-.14.14-.29.29-.13.57.16.28.72 1.19 1.55 1.92 1.06.94 1.95 1.23 2.23 1.37.28.13.44.11.6-.07.16-.18.67-.78.85-1.05.18-.27.35-.22.6-.13.24.09 1.55.73 1.81.86.26.13.44.2.5.31.07.11.07.64-.17 1.31z"/></svg>
+            <span>WhatsApp</span>
+        </a>
+    </nav>
 
-<!-- WhatsApp Button -->
-<a aria-label="Falar no WhatsApp" class="whatsapp-button" href="https://wa.me/5586981252508?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20projetos%20da%20DOPPIO." target="_blank">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
-</svg>
-</a>
-<!-- Scripts -->
-<script src="scripts/main.js"></script>
-<!-- PORTFOLIO LIGHTBOX -->
-<div class="pm-modal" id="pmModal" aria-hidden="true">
-  <button class="pm-close" type="button" aria-label="Fechar" onclick="pmClose()">✕</button>
-  <button class="pm-nav pm-prev" type="button" aria-label="Anterior" onclick="pmNav(-1)">‹</button>
-
-  <div class="pm-modal-content">
-    <img id="pmImage" alt="">
-    <div class="pm-caption">
-      <div id="pmCaptionTitle" class="pm-caption-title"></div>
-      <div id="pmCaptionMeta" class="pm-caption-meta"></div>
-    </div>
-  </div>
-
-  <button class="pm-nav pm-next" type="button" aria-label="Próxima" onclick="pmNav(1)">›</button>
-</div>
-<script>
-const PM_PROJECTS = {"apartamento-tj": {"title": "Apartamento T+J", "meta": "Teresina, PI • 165m² • 2025", "images": ["public/images/projetos/apartamento-tj/01-capa.png", "public/images/projetos/apartamento-tj/02-living.png", "public/images/projetos/apartamento-tj/03-living2.png", "public/images/projetos/apartamento-tj/04-living3.png", "public/images/projetos/apartamento-tj/05-cozinha.png", "public/images/projetos/apartamento-tj/06-cozinha2.png"]}, "escritorio-jv": {"title": "Escritório JV", "meta": "Teresina, PI • 51m² • 2024", "images": ["public/images/projetos/escritorio-jv/01-capa.png", "public/images/projetos/escritorio-jv/02-sala-trabalho.png", "public/images/projetos/escritorio-jv/03-estacao-trabalho.png", "public/images/projetos/escritorio-jv/04-sala-reuniao.png", "public/images/projetos/escritorio-jv/05-escritorio-privado.png"]}, "apartamento-fl": {"title": "Apartamento F+L", "meta": "Teresina, PI • 165m² • 2025-2026", "images": ["public/images/projetos/apartamento-fl/01-capa.png", "public/images/projetos/apartamento-fl/02-suite.png", "public/images/projetos/apartamento-fl/03-banheiro.png", "public/images/projetos/apartamento-fl/04-closet.png", "public/images/projetos/apartamento-fl/05-quarto.png", "public/images/projetos/apartamento-fl/06-detalhes.png"]}};
-
-let pmCurrentProject = null;
-let pmCurrentIndex = 0;
-
-function pmOpen(projectKey, startIndex=0){
-  const p = PM_PROJECTS[projectKey];
-  if(!p) return;
-  pmCurrentProject = projectKey;
-  pmCurrentIndex = startIndex;
-  const m = document.getElementById("pmModal");
-  m.classList.add("show");
-  m.setAttribute("aria-hidden","false");
-  pmRender();
-}
-
-function pmClose(){
-  const m = document.getElementById("pmModal");
-  m.classList.remove("show");
-  m.setAttribute("aria-hidden","true");
-}
-
-function pmNav(dir){
-  const p = PM_PROJECTS[pmCurrentProject];
-  if(!p) return;
-  pmCurrentIndex = (pmCurrentIndex + dir + p.images.length) % p.images.length;
-  pmRender();
-}
-
-function pmRender(){
-  const p = PM_PROJECTS[pmCurrentProject];
-  const img = p.images[pmCurrentIndex];
-  const el = document.getElementById("pmImage");
-  el.src = img;
-  el.alt = p.title;
-  document.getElementById("pmCaptionTitle").textContent = p.title;
-  document.getElementById("pmCaptionMeta").textContent = `${pmCurrentIndex+1}/${p.images.length} • ${p.meta}`;
-}
-
-document.addEventListener("click", (e)=>{
-  const card = e.target.closest(".pm-card");
-  if(card && card.dataset.project){
-    pmOpen(card.dataset.project, 0);
-  }
-  if(e.target && e.target.id === "pmModal") pmClose();
-});
-
-document.addEventListener("keydown", (e)=>{
-  const m = document.getElementById("pmModal");
-  if(!m.classList.contains("show")) return;
-  if(e.key === "Escape") pmClose();
-  if(e.key === "ArrowLeft") pmNav(-1);
-  if(e.key === "ArrowRight") pmNav(1);
-});
-
-window.addEventListener("load", ()=>{
-  const track = document.querySelector(".portfolio-track");
-  if(!track) return;
-  // No celular o carrossel é arrastável com os projetos reais (sem duplicar);
-  // só o efeito de esteira automática do desktop precisa da faixa dobrada.
-  if(window.innerWidth <= 768) return;
-  if(track.dataset.duplicated === "1") return;
-  track.innerHTML = track.innerHTML + track.innerHTML;
-  track.dataset.duplicated = "1";
-});
-
-// Indicador de posição do carrossel no celular ("1 / 3")
-window.addEventListener("load", ()=>{
-  const marquee = document.querySelector(".portfolio-marquee");
-  const indicator = document.getElementById("pmScrollIndicator");
-  if(!marquee || !indicator) return;
-
-  function updateIndicator(){
-    if(window.innerWidth > 768){ indicator.textContent = ""; return; }
-    const cards = marquee.querySelectorAll(".pm-card");
-    if(!cards.length) return;
-    const cardWidth = cards[0].getBoundingClientRect().width;
-    const gap = parseInt(getComputedStyle(marquee.querySelector(".portfolio-track")).gap || 18);
-    const current = Math.round(marquee.scrollLeft / (cardWidth + gap));
-    indicator.textContent = `${Math.min(current+1, cards.length)} / ${cards.length}`;
-  }
-
-  marquee.addEventListener("scroll", updateIndicator, { passive: true });
-  window.addEventListener("resize", updateIndicator);
-  updateIndicator();
-});
-</script>
-
-<!-- BARRA DE NAVEGAÇÃO INFERIOR (somente celular) -->
-<nav class="mobile-tabbar" aria-label="Navegação rápida">
-<a class="tabbar__link" href="#home">
-<svg fill="none" height="20" viewbox="0 0 24 24" width="20"><path d="M3 11l9-8 9 8M5 10v10h14V10" stroke="currentColor" stroke-width="2"></path></svg>
-<span>Início</span>
-</a>
-<a class="tabbar__link" href="#portfolio">
-<svg fill="none" height="20" viewbox="0 0 24 24" width="20"><rect height="7" width="7" x="3" y="3" stroke="currentColor" stroke-width="2"></rect><rect height="7" width="7" x="14" y="3" stroke="currentColor" stroke-width="2"></rect><rect height="7" width="7" x="3" y="14" stroke="currentColor" stroke-width="2"></rect><rect height="7" width="7" x="14" y="14" stroke="currentColor" stroke-width="2"></rect></svg>
-<span>Portfólio</span>
-</a>
-<a class="tabbar__link" href="#contato">
-<svg fill="none" height="20" viewbox="0 0 24 24" width="20"><rect height="16" width="18" x="3" y="4" stroke="currentColor" stroke-width="2"></rect><path d="M3 6l9 7 9-7" stroke="currentColor" stroke-width="2"></path></svg>
-<span>Contato</span>
-</a>
-<a class="tabbar__link tabbar__link--whatsapp" href="https://wa.me/5586981252508?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20projetos%20da%20DOPPIO." target="_blank">
-<svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.44.79 3.06 1.2 4.72 1.2h.02c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.79 14.13c-.24.68-1.42 1.3-1.96 1.36-.5.06-1.02.25-3.4-.71-2.86-1.16-4.7-4.08-4.85-4.27-.14-.19-1.17-1.55-1.17-2.96s.73-2.1 1-2.39c.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.56.8 1.95.87 2.09.07.14.12.31.02.5-.09.19-.14.3-.28.46-.14.16-.3.36-.42.48-.14.14-.29.29-.13.57.16.28.72 1.19 1.55 1.92 1.06.94 1.95 1.23 2.23 1.37.28.13.44.11.6-.07.16-.18.67-.78.85-1.05.18-.27.35-.22.6-.13.24.09 1.55.73 1.81.86.26.13.44.2.5.31.07.11.07.64-.17 1.31z"></path></svg>
-<span>WhatsApp</span>
-</a>
-</nav>
-
+    <script src="scripts/main.js"></script>
 </body>
 </html>
