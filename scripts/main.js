@@ -38,31 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ============================================
-    // 2. SCROLL ATIVO NA NAVEGAÇÃO
-    // ============================================
-    const sections = document.querySelectorAll('section[id]');
-    
-    function scrollActive() {
-        const scrollY = window.pageYOffset;
-        
-        sections.forEach(section => {
-            const sectionHeight = section.offsetHeight;
-            const sectionTop = section.offsetTop - 100;
-            const sectionId = section.getAttribute('id');
-            const navLink = document.querySelector(`.nav__link[href*="${sectionId}"]`);
-            
-            if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                navLink?.classList.add('active');
-            } else {
-                navLink?.classList.remove('active');
-            }
-        });
-    }
-    
-    window.addEventListener('scroll', scrollActive);
-    
-    // ============================================
-    // 3. HEADER AO SCROLL
+    // 2. HEADER AO SCROLL
+    // (o link ativo do menu agora é fixo por página,
+    // já que cada seção do site tem sua própria URL)
     // ============================================
     const header = document.getElementById('header');
     
@@ -77,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', scrollHeader);
     
     // ============================================
-    // 4. SMOOTH SCROLL
+    // 3. SMOOTH SCROLL
     // ============================================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
@@ -100,13 +78,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ============================================
-    // 5. ANIMAÇÃO FADE IN AO SCROLL
+    // 4. ANIMAÇÃO FADE IN AO SCROLL
     // ============================================
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -114,13 +92,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, observerOptions);
-    
+
     // Adicionar classe fade-in aos elementos
     const elementsToAnimate = document.querySelectorAll(`
         .about__member,
         .value__card,
         .differential__card,
-        .portfolio__item
+        .project-card
     `);
     
     elementsToAnimate.forEach(el => {
@@ -129,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ============================================
-    // 6. FORMULÁRIO DE CONTATO
+    // 5. FORMULÁRIO DE CONTATO
     // ============================================
     const contactForm = document.getElementById('contact-form');
     
@@ -179,7 +157,7 @@ ${data.message}
     }
     
     // ============================================
-    // 7. SISTEMA DE NOTIFICAÇÕES
+    // 6. SISTEMA DE NOTIFICAÇÕES
     // ============================================
     function showNotification(message, type = 'success') {
         // Remover notificação existente
@@ -220,7 +198,7 @@ ${data.message}
     }
     
     // ============================================
-    // 8. LAZY LOADING DE IMAGENS
+    // 7. LAZY LOADING DE IMAGENS
     // ============================================
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
     
@@ -240,7 +218,7 @@ ${data.message}
     }
     
     // ============================================
-    // 9. PERFORMANCE - VÍDEO HERO
+    // 8. PERFORMANCE - VÍDEO HERO
     // ============================================
     const heroVideo = document.querySelector('.hero__video');
     
@@ -260,7 +238,7 @@ ${data.message}
     }
     
     // ============================================
-    // 10. CONTADOR DE ESTATÍSTICAS (FUTURO)
+    // 9. CONTADOR DE ESTATÍSTICAS (FUTURO)
     // ============================================
     function animateCounter(element, target, duration = 2000) {
         let current = 0;
@@ -280,7 +258,7 @@ ${data.message}
     }
     
     // ============================================
-    // 11. WHATSAPP FLUTUANTE (OPCIONAL)
+    // 10. WHATSAPP FLUTUANTE (OPCIONAL)
     // ============================================
     function createWhatsAppButton() {
         const whatsappBtn = document.createElement('a');
@@ -322,7 +300,7 @@ ${data.message}
     // createWhatsAppButton();
     
     // ============================================
-    // 12. ANIMAÇÕES CSS ADICIONAIS
+    // 11. ANIMAÇÕES CSS ADICIONAIS
     // ============================================
     const style = document.createElement('style');
     style.textContent = `
@@ -351,7 +329,7 @@ ${data.message}
     document.head.appendChild(style);
     
     // ============================================
-    // 13. CONSOLE LOG BONITO
+    // 12. CONSOLE LOG BONITO
     // ============================================
     console.log('%c🏗️ DOPPIO Arquitetura', 'font-size: 24px; font-weight: bold; color: #AA5641;');
     console.log('%cSite desenvolvido com ❤️ e Claude AI', 'font-size: 12px; color: #666;');
