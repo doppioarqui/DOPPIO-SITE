@@ -4,8 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="DOPPIO Arquitetura e Interiores em Teresina-PI. Projetos residenciais, comerciais, perícia técnica e engenharia de segurança. Transformamos ambientes em experiências memoráveis." name="description"/>
-<meta content="arquitetura Teresina, design interiores Teresina, arquiteto Teresina PI, reforma Teresina, projeto arquitetônico Teresina, perícia técnica Teresina" name="keywords"/>
+<meta content="DOPPIO Arquitetura e Interiores em Teresina-PI. Projetos residenciais e comerciais, design de interiores e reformas. Transformamos ambientes em experiências memoráveis." name="description"/>
+<meta content="arquitetura Teresina, design interiores Teresina, arquiteto Teresina PI, reforma Teresina, projeto arquitetônico Teresina" name="keywords"/>
 <meta content="DOPPIO Arquitetura" name="author"/>
 <meta content="BR-PI" name="geo.region"/>
 <meta content="Teresina" name="geo.placename"/>
@@ -26,7 +26,7 @@
       "@context": "https://schema.org",
       "@type": "ArchitecturalService",
       "name": "DOPPIO Arquitetura e Interiores",
-      "description": "Escritório de arquitetura e interiores em Teresina-PI. Projetos residenciais, comerciais, perícia técnica e engenharia de segurança.",
+      "description": "Escritório de arquitetura e interiores em Teresina-PI. Projetos residenciais e comerciais, design de interiores e reformas.",
       "url": "https://doppioarq.com.br",
             "address": {
         "@type": "PostalAddress",
@@ -103,6 +103,23 @@ will-change: transform;
   .portfolio-marquee{ overflow-x:auto; scroll-snap-type:x mandatory; }
   .portfolio-track{ padding-bottom: 10px; }
   .pm-card{ scroll-snap-align: start; }
+}
+/* No celular o carrossel some do modo "marquee automático" e vira
+   arrastável com indicador de posição — sempre, não só com reduced-motion */
+@media (max-width: 768px){
+  .portfolio-track{ animation: none; }
+  .portfolio-marquee{ overflow-x:auto; scroll-snap-type:x mandatory; mask-image:none; -webkit-mask-image:none; }
+  .portfolio-track{ padding-bottom: 10px; }
+  .pm-card{ scroll-snap-align: start; }
+}
+.pm-indicator{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  font-size: .82rem;
+  color: #EDE6D6;
+  opacity: .85;
+  letter-spacing: 0.04em;
 }
 @keyframes portfolioScroll{to{ transform: translateX(-50%); }}
 .pm-card{
@@ -215,7 +232,7 @@ will-change: transform;
 
 @media (max-width: 520px){
   .pm-card{ flex-basis: 420px; height: 280px; border-radius: 14px; }
-  .pm-nav{ display:none; }
+  .pm-nav{ width: 40px; height: 40px; font-size: 22px; }
   .pm-caption{ flex-direction:column; }
 }
 </style>
@@ -243,6 +260,7 @@ will-change: transform;
 </div>
 </nav>
 </header>
+<div class="nav__overlay" id="nav-overlay"></div>
 <!-- HERO SECTION com vídeo -->
 <section class="hero" id="home">
 <div class="hero__video-container">
@@ -375,24 +393,6 @@ will-change: transform;
 <li>Design de interiores completo</li>
 <li>Projetos de reforma e ampliação</li>
 <li>Acompanhamento e compatibilização de projetos</li>
-</ul>
-</div>
-<div class="differential__card">
-<h3 class="differential__title">Perícia e Avaliação Imobiliária</h3>
-<ul class="differential__list">
-<li>Perícia judicial imobiliária</li>
-<li>Avaliação de imóveis urbanos e rurais</li>
-<li>Laudos técnicos de vistoria</li>
-<li>Assistência técnica</li>
-</ul>
-</div>
-<div class="differential__card">
-<h3 class="differential__title">Engenharia de Segurança</h3>
-<ul class="differential__list">
-<li>Elaboração de laudos técnicos (LTCAT e PGR)</li>
-<li>Consultoria em segurança do trabalho</li>
-<li>Adequação de ambientes</li>
-<li>Análise de riscos</li>
 </ul>
 </div>
 </div>
@@ -529,7 +529,8 @@ will-change: transform;
       </div>
     </div>
 
-    <p class="portfolio__hint">Toque ou passe o mouse para pausar. Clique em um projeto para abrir a galeria.</p>
+    <p class="portfolio__hint">Arraste para o lado ou clique em um projeto para abrir a galeria.</p>
+    <div class="pm-indicator" id="pmScrollIndicator"></div>
   </div>
 </section>
 
@@ -602,7 +603,6 @@ will-change: transform;
 <option value="residencial">Residencial</option>
 <option value="comercial">Comercial</option>
 <option value="reforma">Reforma</option>
-<option value="pericia">Perícia/Avaliação</option>
 <option value="outro">Outro</option>
 </select>
 </div>
@@ -708,35 +708,55 @@ document.addEventListener("keydown", (e)=>{
 window.addEventListener("load", ()=>{
   const track = document.querySelector(".portfolio-track");
   if(!track) return;
+  // No celular o carrossel é arrastável com os projetos reais (sem duplicar);
+  // só o efeito de esteira automática do desktop precisa da faixa dobrada.
+  if(window.innerWidth <= 768) return;
   if(track.dataset.duplicated === "1") return;
   track.innerHTML = track.innerHTML + track.innerHTML;
   track.dataset.duplicated = "1";
 });
-</script>
 
-<script>
-window.addEventListener('load', ()=>{
-  const track = document.querySelector('.portfolio-track');
-  if(!track) return;
-  let pmPaused=false;
-  let pmIndex=0;
+// Indicador de posição do carrossel no celular ("1 / 3")
+window.addEventListener("load", ()=>{
+  const marquee = document.querySelector(".portfolio-marquee");
+  const indicator = document.getElementById("pmScrollIndicator");
+  if(!marquee || !indicator) return;
 
-  track.addEventListener('mouseenter',()=>pmPaused=true);
-  track.addEventListener('mouseleave',()=>pmPaused=false);
-
-  function step(){
-    if(pmPaused) return;
-    const card = track.querySelector('.pm-card');
-    if(!card) return;
-    const gap = parseInt(getComputedStyle(track).gap || 18);
-    const w = card.getBoundingClientRect().width + gap;
-    track.style.transition='transform 800ms ease';
-    pmIndex++;
-    track.style.transform = `translateX(-${w*pmIndex}px)`;
+  function updateIndicator(){
+    if(window.innerWidth > 768){ indicator.textContent = ""; return; }
+    const cards = marquee.querySelectorAll(".pm-card");
+    if(!cards.length) return;
+    const cardWidth = cards[0].getBoundingClientRect().width;
+    const gap = parseInt(getComputedStyle(marquee.querySelector(".portfolio-track")).gap || 18);
+    const current = Math.round(marquee.scrollLeft / (cardWidth + gap));
+    indicator.textContent = `${Math.min(current+1, cards.length)} / ${cards.length}`;
   }
-  setInterval(step, 6000);
+
+  marquee.addEventListener("scroll", updateIndicator, { passive: true });
+  window.addEventListener("resize", updateIndicator);
+  updateIndicator();
 });
 </script>
+
+<!-- BARRA DE NAVEGAÇÃO INFERIOR (somente celular) -->
+<nav class="mobile-tabbar" aria-label="Navegação rápida">
+<a class="tabbar__link" href="#home">
+<svg fill="none" height="20" viewbox="0 0 24 24" width="20"><path d="M3 11l9-8 9 8M5 10v10h14V10" stroke="currentColor" stroke-width="2"></path></svg>
+<span>Início</span>
+</a>
+<a class="tabbar__link" href="#portfolio">
+<svg fill="none" height="20" viewbox="0 0 24 24" width="20"><rect height="7" width="7" x="3" y="3" stroke="currentColor" stroke-width="2"></rect><rect height="7" width="7" x="14" y="3" stroke="currentColor" stroke-width="2"></rect><rect height="7" width="7" x="3" y="14" stroke="currentColor" stroke-width="2"></rect><rect height="7" width="7" x="14" y="14" stroke="currentColor" stroke-width="2"></rect></svg>
+<span>Portfólio</span>
+</a>
+<a class="tabbar__link" href="#contato">
+<svg fill="none" height="20" viewbox="0 0 24 24" width="20"><rect height="16" width="18" x="3" y="4" stroke="currentColor" stroke-width="2"></rect><path d="M3 6l9 7 9-7" stroke="currentColor" stroke-width="2"></path></svg>
+<span>Contato</span>
+</a>
+<a class="tabbar__link tabbar__link--whatsapp" href="https://wa.me/5586981252508?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20projetos%20da%20DOPPIO." target="_blank">
+<svg fill="currentColor" height="20" viewbox="0 0 24 24" width="20"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.44.79 3.06 1.2 4.72 1.2h.02c5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.79 14.13c-.24.68-1.42 1.3-1.96 1.36-.5.06-1.02.25-3.4-.71-2.86-1.16-4.7-4.08-4.85-4.27-.14-.19-1.17-1.55-1.17-2.96s.73-2.1 1-2.39c.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.41-.07.64.49.24.56.8 1.95.87 2.09.07.14.12.31.02.5-.09.19-.14.3-.28.46-.14.16-.3.36-.42.48-.14.14-.29.29-.13.57.16.28.72 1.19 1.55 1.92 1.06.94 1.95 1.23 2.23 1.37.28.13.44.11.6-.07.16-.18.67-.78.85-1.05.18-.27.35-.22.6-.13.24.09 1.55.73 1.81.86.26.13.44.2.5.31.07.11.07.64-.17 1.31z"></path></svg>
+<span>WhatsApp</span>
+</a>
+</nav>
 
 </body>
 </html>
