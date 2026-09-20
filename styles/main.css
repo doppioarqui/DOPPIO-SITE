@@ -15,15 +15,15 @@
 :root {
     /* Cores principais */
     --color-terracota: #AA5641;
-    --color-black: #3C3C3C;
+    --color-black: #2E2B27;
     --color-white: #FFFFFF;
-    --color-beige: #F5F5DC;
-    --color-beige-dark: #E8DCC8;
+    --color-beige: #F2EEE4;
+    --color-beige-dark: #E4DBC9;
     --color-wood: #8B6F47;
     --color-green: #5A6B4F;
-    
+
     /* Gradientes */
-    --gradient-overlay: linear-gradient(180deg, rgba(60, 60, 60, 0.7) 0%, rgba(60, 60, 60, 0.3) 100%);
+    --gradient-overlay: linear-gradient(180deg, rgba(20, 18, 16, 0.5) 0%, rgba(20, 18, 16, 0.12) 100%);
     
     /* Tipografia */
     --font-display: 'Montserrat', sans-serif;
@@ -438,6 +438,24 @@ a {
     margin-top: var(--spacing-lg);
 }
 
+@media (max-width: 768px) {
+    .values__grid {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: var(--spacing-sm);
+        margin-left: calc(var(--spacing-md) * -1);
+        margin-right: calc(var(--spacing-md) * -1);
+        padding: 0 var(--spacing-md) 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .values__grid .value__card {
+        flex: 0 0 78%;
+        scroll-snap-align: start;
+    }
+}
+
 .value__card {
     background: var(--color-white);
     padding: var(--spacing-lg);
@@ -487,10 +505,14 @@ a {
 }
 
 .differentials__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
+    display: flex;
+    justify-content: center;
     margin-top: var(--spacing-lg);
+}
+
+.differentials__grid .differential__card {
+    max-width: 480px;
+    width: 100%;
 }
 
 .differential__card {
@@ -934,20 +956,42 @@ a {
         box-shadow: var(--shadow-lg);
         padding: var(--spacing-xl) var(--spacing-md);
         transition: var(--transition-smooth);
+        z-index: 1001;
+        overflow-y: auto;
     }
-    
+
     .nav__menu.active {
         right: 0;
     }
-    
+
     .nav__list {
         flex-direction: column;
         align-items: flex-start;
         gap: var(--spacing-md);
     }
-    
+
     .nav__toggle {
         display: flex;
+    }
+
+    /* Véu escurecido atrás do menu mobile */
+    .nav__overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(20, 18, 16, 0.55);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav__overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    body.nav-open {
+        overflow: hidden;
     }
     
     .about__member,
@@ -978,11 +1022,7 @@ a {
     .portfolio__grid {
         grid-template-columns: 1fr;
     }
-    
-    .differentials__grid {
-        grid-template-columns: 1fr;
-    }
-    
+
     .footer__content {
         grid-template-columns: 1fr;
     }
@@ -1034,7 +1074,7 @@ a {
     box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
     cursor: pointer;
     transition: all 0.3s ease;
-    z-index: 1000;
+    z-index: 500;
     text-decoration: none;
 }
 
@@ -1049,17 +1089,67 @@ a {
     fill: white;
 }
 
+/* No mobile, a ação do WhatsApp mora na barra inferior — o botão flutuante
+   deixa de existir para não sobrepor texto durante a rolagem */
 @media (max-width: 768px) {
     .whatsapp-button {
-        width: 56px;
-        height: 56px;
-        bottom: 1.5rem;
-        right: 1.5rem;
+        display: none;
     }
-    
-    .whatsapp-button svg {
-        width: 28px;
-        height: 28px;
+}
+
+/* ========================================
+   BARRA DE NAVEGAÇÃO INFERIOR (MOBILE)
+   ======================================== */
+.mobile-tabbar {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-bottom: 64px;
+    }
+
+    .mobile-tabbar {
+        display: flex;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 64px;
+        background: var(--color-white);
+        border-top: 1px solid rgba(0, 0, 0, 0.08);
+        box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.06);
+        z-index: 950;
+    }
+
+    .tabbar__link {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3px;
+        color: var(--color-black);
+        opacity: 0.65;
+        font-size: 0.68rem;
+        font-weight: 600;
+        letter-spacing: 0.01em;
+    }
+
+    .tabbar__link svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tabbar__link:active,
+    .tabbar__link:hover {
+        opacity: 1;
+        color: var(--color-terracota);
+    }
+
+    .tabbar__link--whatsapp {
+        opacity: 1;
+        color: #25D366;
     }
 }
 
