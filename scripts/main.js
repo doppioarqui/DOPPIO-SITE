@@ -9,21 +9,32 @@ document.addEventListener('DOMContentLoaded', function() {
     // ============================================
     const navToggle = document.getElementById('nav-toggle');
     const navMenu = document.getElementById('nav-menu');
+    const navOverlay = document.getElementById('nav-overlay');
     const navLinks = document.querySelectorAll('.nav__link');
-    
+
+    function closeMenu() {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+        navOverlay?.classList.remove('active');
+        document.body.classList.remove('nav-open');
+    }
+
     if (navToggle) {
         navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            navToggle.classList.toggle('active');
+            const opening = !navMenu.classList.contains('active');
+            navMenu.classList.toggle('active', opening);
+            navToggle.classList.toggle('active', opening);
+            navOverlay?.classList.toggle('active', opening);
+            document.body.classList.toggle('nav-open', opening);
         });
     }
-    
+
+    // Fechar menu ao clicar no véu escurecido atrás dele
+    navOverlay?.addEventListener('click', closeMenu);
+
     // Fechar menu ao clicar em um link
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navMenu.classList.remove('active');
-            navToggle.classList.remove('active');
-        });
+        link.addEventListener('click', closeMenu);
     });
     
     // ============================================
